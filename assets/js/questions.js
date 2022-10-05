@@ -35,7 +35,7 @@ var questions = [
         answers: {
             a: "Hypertech Markdown Linear",
             b: "Hypertext Markup Language",
-            c: "Hamndsome Timmy Made Lemonade"
+            c: "Handsome Timmy Made Lemonade"
         },
         correctAnswer: "b"
     },
@@ -76,4 +76,5 @@ var questions = [
             d: "Yahoo"
         },
         correctAnswer: "b"
+    }
     ]

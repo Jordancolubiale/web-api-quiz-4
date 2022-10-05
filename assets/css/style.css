@@ -1,10 +1,13 @@
 
-
+body{
+    background-color: lime;
+}
 /*--------------HEADING------------*/
 .nav{
 display: flex;
 font-size: 20px;
 justify-content: space-between;
+color: purple;
 }
 
 .scores{
@@ -29,6 +32,7 @@ justify-content: space-between;
     align-content: center;
     margin-top: 30px;
     padding-top: 100px;
+    color: purple;
 }
 
 .title{
@@ -41,4 +45,18 @@ text-align: center;
 
 .start{
 text-align: center;
+font-size: 24px;
+}
+
+/*-------END SCREEN------*/
+
+#end-screen{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    margin-top: 30px;
+    padding-top: 100px;
+    color: purple;
+    background-color: blue;
 }
