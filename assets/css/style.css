@@ -1,6 +1,12 @@
 
 
 /*--------------HEADING------------*/
+.nav{
+display: flex;
+font-size: 20px;
+justify-content: space-between;
+}
+
 .scores{
 
 }
@@ -10,9 +16,29 @@
 }
 
 .timetex{
-color: red;
+
 }
 
 .timenum{
 
+}
+/*-------- CENTERPIECE -------- */
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-top: 30px;
+    padding-top: 100px;
+}
+
+.title{
+text-align: center;
+}
+
+.para{
+text-align: center;
+}
+
+.start{
+text-align: center;
 }
