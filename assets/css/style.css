@@ -51,12 +51,37 @@ font-size: 24px;
 /*-------END SCREEN------*/
 
 #end-screen{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: center;
-    margin-top: 30px;
-    padding-top: 100px;
+    height: 200px;
+    background-color: lime;
+    text-align: center;
+    font-size: 24px;
     color: purple;
-    background-color: blue;
+}
+
+.finished{
+    
+}
+
+/*-------HIGHSCORES-------*/
+
+.go-back{
+    background-color: purple;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    height: 30px;
+}
+
+#clear{
+    background-color: purple;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    height: 30px;
 }
