@@ -52,11 +52,10 @@ var questions = [
         question: "What does 'justify-content' effect considering flex display is in a row?",
         answers: {
             a: "vertical",
-            b: "on the z-axis",
+            b: "horizontal",
             c: "diagnol",
-            d: "horizontal"
         },
-        correctAnswer: "d"
+        correctAnswer: "b"
     },
     {
         question: "What is the command that allows you to change background color?",
@@ -73,7 +72,6 @@ var questions = [
             a: "Safari",
             b: "Google Chrome",
             c: "Internet Explorer",
-            d: "Yahoo"
         },
         correctAnswer: "b"
     }

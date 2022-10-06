@@ -1,22 +1,27 @@
 // variables to keep track of quiz state
     // currentQuestion
-    var currentQuestion
+    var currentQuestion = 0
     // time
     var time 
     // timerId
     var timerId
-
+  var score = 0
 // variables to reference DOM elements
 var questionsEl = document.getElementById('questions');
 var endScreen = document.getElementById("end-screen")
 var startButton = document.querySelector(".start");
-
+var questionTitle = document.getElementById("question-title")
+var answerA = document.getElementById("answer-a")
+var answerB = document.getElementById("answer-b")
+var answerC = document.getElementById("answer-c")
+var feedback = document.getElementById("choicefeedback")
 questionsEl.style.display ="none"
 endScreen.style.display ="none"
 /// FUNCTION TO START THE QUIZ
 function startQuiz() {
   // hide start screen 
-  
+  questionsEl.style.display ="block"
+  startButton.style.display ="none"
   // un-hide questions section
 
   // start timer
@@ -29,7 +34,10 @@ function startQuiz() {
 /// FUNCTION TO GET/SHOW EACH QUESTION ///
 function getQuestion() {
   // get current question object from array
-
+questionTitle.textContent = questions[currentQuestion].question
+answerA.textContent = questions[currentQuestion].answers.a
+answerB.textContent = questions[currentQuestion].answers.b
+answerC.textContent = questions[currentQuestion].answers.c
   // update title with current question
 
   // clear out any old question choices
@@ -45,13 +53,21 @@ function getQuestion() {
 
 /// FUNCTION FOR CLICKING A QUESTION ///
 function questionClick(event) {
-
+var userChoice = event.target.getAttribute("id").split("-")[1]
+console.log(userChoice)
   // if the clicked element is not a choice button, do nothing.
-  if (something) {
-
+  if (userChoice === questions[currentQuestion].correctAnswer) {
+     console.log('correct')
+     score +=5
+     feedback.textContent = "Question:"+(currentQuestion+1)+" is correct. Score :"+ score
+  }else{
+    console.log('wrong')
+    feedback.textContent = "Question:"+(currentQuestion+1)+" is wrong. Score :"+ score
   }
 
-  if (something) {
+  if (currentQuestion < questions.length-1) {
+    currentQuestion++
+    getQuestion()
   // check if user guessed wrong
     // penalize time
 
@@ -107,4 +123,8 @@ function saveHighscore() {
 
   // user clicks button to start quiz
 
+startButton.addEventListener("click",startQuiz)
+answerA.addEventListener("click", questionClick)
+answerB.addEventListener("click", questionClick)
+answerC.addEventListener("click", questionClick)
   // user clicks on element containing choices
