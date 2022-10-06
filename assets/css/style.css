@@ -1,13 +1,13 @@
 
 body{
-    background-color: lime;
+    background-color: gray;
 }
 /*--------------HEADING------------*/
 .nav{
 display: flex;
 font-size: 20px;
 justify-content: space-between;
-color: purple;
+color: darkblue;
 }
 
 .scores{
@@ -32,7 +32,7 @@ color: purple;
     align-content: center;
     margin-top: 30px;
     padding-top: 100px;
-    color: purple;
+    color: darkblue;
 }
 
 .title{
@@ -52,10 +52,10 @@ font-size: 24px;
 
 #end-screen{
     height: 200px;
-    background-color: lime;
+    background-color: gray;
     text-align: center;
     font-size: 24px;
-    color: purple;
+    color: darkblue;
 }
 
 .finished{
@@ -65,7 +65,7 @@ font-size: 24px;
 /*-------HIGHSCORES-------*/
 
 .go-back{
-    background-color: purple;
+    background-color: darkblue;
     color: white;
     padding: 15px 32px;
     text-align: center;
@@ -76,7 +76,7 @@ font-size: 24px;
 }
 
 #clear{
-    background-color: purple;
+    background-color: darkblue;
     color: white;
     padding: 15px 32px;
     text-align: center;

@@ -1,12 +1,18 @@
 // variables to keep track of quiz state
     // currentQuestion
+    var currentQuestion
     // time
+    var time 
     // timerId
+    var timerId
 
 // variables to reference DOM elements
 var questionsEl = document.getElementById('questions');
+var endScreen = document.getElementById("end-screen")
+var startButton = document.querySelector(".start");
 
-
+questionsEl.style.display ="none"
+endScreen.style.display ="none"
 /// FUNCTION TO START THE QUIZ
 function startQuiz() {
   // hide start screen 
