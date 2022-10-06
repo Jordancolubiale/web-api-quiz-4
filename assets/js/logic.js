@@ -2,9 +2,9 @@
     // currentQuestion
     var currentQuestion = 0
     // time
-    var time 
+    var timeCounter = questions.length*10
     // timerId
-    var timerId
+    var timerId;
   var score = 0
 // variables to reference DOM elements
 var questionsEl = document.getElementById('questions');
@@ -15,6 +15,7 @@ var answerA = document.getElementById("answer-a")
 var answerB = document.getElementById("answer-b")
 var answerC = document.getElementById("answer-c")
 var feedback = document.getElementById("choicefeedback")
+var timerEl = document.querySelector(".timenum")
 questionsEl.style.display ="none"
 endScreen.style.display ="none"
 /// FUNCTION TO START THE QUIZ
@@ -27,7 +28,7 @@ function startQuiz() {
   // start timer
 
   // show starting time
-
+  clockTick()
   getQuestion();
 }
 
@@ -76,6 +77,7 @@ console.log(userChoice)
     // give them feedback, letting them know it's wrong
   } else {
     // give them feedback, letting them know it's right
+    quizEnd()
   }
 
   // flash right/wrong feedback on page for a short period of time
@@ -89,6 +91,10 @@ console.log(userChoice)
 
 /// FUNCTION TO END THE QUIZ ///
 function quizEnd() {
+  questionsEl.style.display ="none"
+endScreen.style.display ="block"
+timerEl.textContent = timeCounter;
+clearInterval(timerId)
   // stop timer
 
   // show end screen
@@ -101,7 +107,14 @@ function quizEnd() {
 /// FUNCTION FOR UPDATING THE TIME ///
 function clockTick() {
   // update time
-
+  timerId = setInterval(function(){
+    timerEl.textContent = timeCounter;
+    if(timeCounter > 0){
+      timeCounter--;
+    }else{
+      quizEnd()
+    }
+  },1000)
   // check if user ran out of time
 }
 
